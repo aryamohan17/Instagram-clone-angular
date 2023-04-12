@@ -1,0 +1,79 @@
+<div class="container text-center w-75">
+  <div class="row">
+    <div class="col-4"></div>
+    <div class="col-4">
+      <form [formGroup]="signupForm">
+        <div class="border mt-5">
+          <div class="mt-5">
+            <img src="assets/instagram-word-login.jpg" class="w-50 h-50" alt="" srcset="">
+          </div>
+          <div>
+            <p class="ps-3 pe-3 text-secondary fs-5">Sign up to see photos and videos from your friends.</p>
+          </div>
+          <div class="ps-3 pe-3">
+            <button type="button" class="btn btn-primary form-control"><i class="fa-brands fa-square-facebook"></i>&nbsp; Log in with facebook</button>
+
+          </div>
+          <div class="pt-3">
+            <p>OR</p>
+          </div>
+          <div class="form-floating mb-2 ms-3 me-3 mt-3">
+                         <input type="email" class="form-control" id="emailPhone" formControlName="emailPhone"  placeholder="name@example.com">
+                         <label for="emailPhone" class="text-sm text-secondary fs-6">Email address</label>
+
+                         <div class="" *ngIf="this.signupForm.get('emailPhone')?.errors && this.signupForm.get('emailPhone')?.touched">
+              <i class="fa-regular fa-circle-xmark text-danger"></i>
+          </div>
+          </div>
+          
+       
+         
+          <div class="form-floating mb-3 ms-3 me-3">
+            <input type="text" class="form-control" formControlName="fullname" id="fullname" placeholder="Password">
+            <label for="fullname" class="text-secondary">Fullname</label>
+          </div>
+          <div *ngIf="this.signupForm.get('fullname')?.errors && this.signupForm.get('fullname')?.touched">
+            <i class="fa-regular fa-circle-xmark text-danger"></i>
+          </div>
+          <div class="form-floating mb-3 ms-3 me-3">
+            <input type="text" class="form-control" formControlName="username" id="username" placeholder="Password">
+            <label for="username" class="text-secondary">Username</label>
+          </div>
+          <div *ngIf="this.signupForm.get('username')?.errors && this.signupForm.get('username')?.touched">
+            <i class="fa-regular fa-circle-xmark text-danger"></i>
+          </div>
+          <div class="form-floating mb-3 ms-3 me-3">
+            <input type="password" class="form-control" formControlName="password" id="password" placeholder="Password">
+            <label for="password" class="text-secondary">Password</label>
+          </div>
+          <div *ngIf="this.signupForm.get('password')?.errors && this.signupForm.get('password')?.touched">
+            <i class="fa-regular fa-circle-xmark text-danger"></i>
+          </div>
+          <div class="form-floating mb-3 ms-3 me-3">
+            <input type="text" class="form-control" formControlName="img_url" id="img_url" placeholder="Profile image url">
+            <label for="img_url" class="text-secondary">Profile pic url</label>
+          </div>
+          <div *ngIf="this.signupForm.get('img_url')?.errors && this.signupForm.get('img_url')?.touched">
+            <i class="fa-regular fa-circle-xmark text-danger"></i>
+          </div>
+          <div class="mb-3 ms-3 me-3">
+            <button type="button" (click)="register()" class="btn btn-primary form-control">Sign up</button>
+          </div>
+        </div>
+        <div class="border mt-3 pt-3">
+          <p>Have an account? <a routerLink="" style="text-decoration: none;"> Login</a></p>
+        </div>
+        <!-- get app -->
+        <div class="mb-5">
+          <p>Get the app</p>
+          <a href="https://play.google.com/store/apps/details?id=com.instagram.android&hl=en_IN&gl=US"
+            target="_blank"><img src="assets/google-play-store.png" class="w-50 h-75" alt="" srcset=""></a>
+          <a href="https://apps.microsoft.com/store/detail/instagram/9NBLGGH5L9XT" target="_blank"><img
+              src="assets/microsoft-gallery.png" class="w-50 h-25" alt="" srcset=""></a>
+
+        </div>
+      </form>
+    </div>
+    <div class="col-4"></div>
+  </div>
+</div>

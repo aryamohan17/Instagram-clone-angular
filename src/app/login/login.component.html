@@ -1,0 +1,72 @@
+<div class="container text-center w-50">
+    <div class="row">
+        <div class="col-lg-6">
+            <div id="carouselExampleSlidesOnly"  class="carousel slide mt-5 border border-dark rounded border-5" data-bs-ride="carousel">
+                <div class="carousel-inner">
+                  <div class="carousel-item active">
+                    <img src="assets/login-img.png"  alt="...">
+                  </div>
+                  <div class="carousel-item">
+                    <img src="assets/login-img1.png"  alt="...">
+                  </div>
+                  <div class="carousel-item">
+                    <img src="assets/login-img-2.png"  alt="...">
+                  </div>
+                  <div class="carousel-item">
+                    <img src="assets/login-img-3.png"  alt="...">
+                  </div>
+                </div>
+              </div>
+        </div>
+        <div class="col-lg-6">
+            <!-- input field -->
+            <form [formGroup]="loginForm">
+
+  
+            <div class="border mt-5">
+                <div class="mt-5">
+                    <img src="assets/instagram-word-login.jpg" class="w-50 h-50" alt="" srcset="">
+                </div>
+                <div class="form-floating mb-2 ms-3 me-3 mt-5">
+                    <input type="email" class="form-control" formControlName="emails" id="floatingInput" placeholder="name@example.com">
+                    <label for="floatingInput" class="text-sm">Email address</label>
+                  </div>
+                  <div *ngIf="this.loginForm.get('emails')?.errors && this.loginForm.get('emails')?.touched">
+                    <i class="fa-regular fa-circle-xmark text-danger"></i>
+                  </div>
+                  <div class="form-floating mb-3 ms-3 me-3">
+                    <input type="password" class="form-control" formControlName="pass" id="floatingPassword" placeholder="Password">
+                    <label for="floatingPassword">Password</label>
+                  </div>
+                  <div *ngIf="this.loginForm.get('pass')?.errors && this.loginForm.get('pass')?.touched">
+                    <i class="fa-regular fa-circle-xmark text-danger"></i>
+                  </div>
+                  <div class="mb-3 ms-3 me-3">
+                    <button type="button" (click)="login()" class="btn btn-primary form-control">Log in</button>
+                  </div>
+                  <div>
+                    <p>OR</p>
+                  </div>
+                  <div>
+                    <a style="color: rgb(73, 4, 138);font-weight: bold;"><i class="fa-brands fa-square-facebook"></i>&nbsp; Log in with facebook</a>
+                  </div>
+                  <div class="pt-3 pb-3">
+                    <a href="" style="text-decoration: none;">forgot password?</a>
+                  </div>
+            </div>
+           
+            <!-- sign up -->
+            <div class="border mt-5">
+                <p>Don't have an account? <a routerLink="signup" style="text-decoration: none;"> Sign up</a></p>
+            </div>
+            <!-- get app -->
+            <div>
+              <p>Get the app</p>
+              <a href="https://play.google.com/store/apps/details?id=com.instagram.android&hl=en_IN&gl=US" target="_blank"><img src="assets/google-play-store.png" class="w-50 h-75" alt="" srcset=""></a>
+              <a href="https://apps.microsoft.com/store/detail/instagram/9NBLGGH5L9XT" target="_blank"><img src="assets/microsoft-gallery.png" class="w-50 h-25" alt="" srcset=""></a>
+
+            </div>
+        
+        
+    
+

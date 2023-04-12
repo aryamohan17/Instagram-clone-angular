@@ -1,0 +1,164 @@
+<div class="w-100 ">
+<div class="row">
+  <div class="col-4">
+    <div class="d-flex flex-column flex-shrink-0 p-3 bg-white" style="width: 280px;">
+      <a href="/" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto link-dark text-decoration-none">
+        <svg class="bi me-2" width="40" height="32"><use xlink:href="#bootstrap"></use></svg>
+        <span class="fs-4"><img src="assets/instagram-word-login.jpg" class="w-50 h-50" alt="" srcset=""></span>
+      </a>
+      <hr>
+      <ul class="nav nav-pills flex-column mb-auto">
+        <!-- <li class="nav-item">
+          <a href="#" class="nav-link-dark" aria-current="page">
+            Home
+          </a>
+        </li> -->
+
+        <li>
+          <a href="#" class="nav-link link-dark">
+            <i class="fa-solid fa-house"></i>&nbsp;&nbsp;Home
+          </a>
+        </li>
+
+        <li>
+          <a href="#" class="nav-link link-dark">
+            <i class="fa-solid fa-magnifying-glass"></i>&nbsp;&nbsp;
+            Search
+          </a>
+        </li>
+        <li>
+          <a href="#" class="nav-link link-dark">
+            <i class="fa-brands fa-wpexplorer"></i>&nbsp;&nbsp;
+            Explore
+          </a>
+        </li>
+        <li>
+          <a href="#" class="nav-link link-dark">
+            <i class="fa-solid fa-clapperboard"></i>&nbsp;&nbsp;
+            Reels
+          </a>
+        </li>
+        <li>
+          <a href="#" class="nav-link link-dark">
+            <i class="fa-brands fa-facebook-messenger"></i>&nbsp;&nbsp;
+            Messages
+          </a>
+        </li>
+        <li>
+          <a href="#" class="nav-link link-dark">
+            <i class="fa-regular fa-heart"></i>&nbsp;&nbsp;
+            Notification
+          </a>
+        </li>
+        <li>
+          <a routerLink="/createData" class="nav-link link-dark">
+            <i class="fa-regular fa-square-plus"></i>&nbsp;&nbsp;
+            Create
+          </a>
+        </li>
+        <li>
+            <a href="#" class="d-flex align-items-center link-dark text-decoration-none"  aria-expanded="false">
+              <img [src]="profile_pics" alt="" width="22" height="22" class="rounded-circle border border-1 border-danger">&nbsp;&nbsp;
+              <span>{{userName}}</span>
+            </a>
+          
+        </li>
+        <li>
+          <a href="#" class="nav-link link-dark">
+            <i class="fa-solid fa-bars"></i>&nbsp;&nbsp;
+            More
+          </a>
+        </li>
+        <li>
+          <a href="#" class="nav-link link-dark">
+            <i class="fa-solid fa-bars"></i>&nbsp;&nbsp;
+            <button class="bg-danger text-white border-danger ms-3 " (click)="logout()">Logout</button>
+
+          </a>
+        </li>
+      </ul>
+      <!-- <div class="dropdown">
+       
+        <ul class="dropdown-menu text-small shadow" aria-labelledby="dropdownUser2">
+          <li><a class="dropdown-item" href="#">New project...</a></li>
+          <li><a class="dropdown-item" href="#">Settings</a></li>
+          <li><a class="dropdown-item" href="#">Profile</a></li>
+          <li><hr class="dropdown-divider"></li>
+          <li><a class="dropdown-item" href="#">Sign out</a></li>
+        </ul>
+      </div> -->
+    </div>
+   
+  </div>
+ 
+  <div class="col-4 mt-3">
+<div class="story_img">
+  <img class="rounded-circle border border-3 border-danger" alt="avatar1" src="assets/Aishwarya-Rai.jpg" width="64" height="66" />
+  <!-- <p class="me-1">aiswarya_rai</p> -->
+  <img class="rounded-circle ms-2 border border-3 border-danger" alt="avatar1" src="assets/Amitabh-Bachchan.jpg" width="64" height="66" />
+  <!-- <p class="me-1">aiswarya_rai</p> -->
+  <img class="rounded-circle ms-2 border border-3 border-danger" alt="avatar1" src="assets/Diana_img.jpg" width="64" height="66" />
+  <img class="rounded-circle ms-2 border border-3 border-danger" alt="avatar1" src="assets/mohanlal.jpg" width="64" height="66" />
+  <img class="rounded-circle ms-2 border border-3 border-danger" alt="avatar1" src="assets/mammootty.jpg" width="64" height="66" />
+
+  <!-- <img src="" width="400" height="400" class="img-circle" alt=""> -->
+</div>
+<div class="story_img">
+
+   
+
+  <!-- <img src="" width="400" height="400" class="img-circle" alt=""> -->
+</div>
+<div class="story_img"></div>
+<div class="story_img"></div>
+<div class="story_img"></div>
+<div class="story_img"></div><br><br>
+
+<div>
+  <h6>{{userName}}</h6>
+
+  <img  [src]="profile_pics" width="320" height="366" />&nbsp;&nbsp;
+  <!-- <span class="glyphicon glyphicon-heart"     [class.highlighted]="isActive" >
+  </span> -->
+  <div>
+    <button (click)="like()"><i class="fa-regular fa-2x fa-heart"></i></button>
+    <i class="fa-regular fa-comment fa-2x"></i><i class="fa-solid fa-2x fa-square-arrow-up-right"></i>
+  </div>
+  <!-- <button mat-icon-button color="warn" aria-label="Example icon button with a heart icon">
+    <mat-icon>favorite</mat-icon>
+  </button> -->
+
+  <h6>aiwarya_rai</h6>
+  <img src="assets/Aishwarya-Rai.jpg" width="340"height="300" alt=""><br>
+  <i class="fa-regular fa-2x fa-heart">&nbsp;&nbsp;<i class="fa-regular fa-comment"></i></i>&nbsp;&nbsp;<i class="fa-solid fa-2x fa-square-arrow-up-right"></i>
+</div>
+  </div>
+  <div class="col-4 mt-3">
+    <div class="profiles">
+            <img class="rounded-circle border border-3 border-danger" alt="avatar1" [src]="profile_pics" width="64" height="66" />&nbsp;&nbsp;
+            <span><a routerLink="/viewUser" style="text-decoration: none;">{{userName}}</a></span>&nbsp;&nbsp;
+            <span>{{fname}}</span>&nbsp;&nbsp;
+            <a  style="text-decoration: none;">Switch</a>
+
+    </div><br>
+    <div class="suggest_people">
+      <div class="heading">
+        <p>Suggestions for you</p>
+        <div *ngFor="let i of allUserDatas">
+          <a style="text-decoration: none;" >
+            <img class="rounded-circle border border-3 border-danger" alt="avatar1" [src]="i.profile_photo" width="64" height="66" />&nbsp;&nbsp;
+             <span class="text-dark">{{i.fullName}}</span>&nbsp;&nbsp;
+             <button class="btn btn-outline-primary" (click)="followUser(i.username)">Follow</button>
+         </a><br>
+        </div>
+      
+      
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+
+
+
+
