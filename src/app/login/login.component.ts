@@ -21,14 +21,16 @@ export class LoginComponent {
     var psw = this.loginForm.value.pass
     if(this.loginForm.valid){
       this.ds.login(email_id,psw).subscribe((result:any)=>{
+        localStorage.setItem("currentId",JSON.stringify(result.currentId))
+        
         localStorage.setItem("currentUserName",JSON.stringify(result.currentUserName))
         localStorage.setItem("currentFullname",JSON.stringify(result.currentFullname))
 
         localStorage.setItem("currentProfilePic",JSON.stringify(result.currentProfilePic))
-        localStorage.setItem("currentPostPic",JSON.stringify(result.currentPostPic))
-        localStorage.setItem("currrentUserLike",JSON.stringify(result.currentUserLike))
-        localStorage.setItem("currentFollower",JSON.stringify(result.currentFollower))
-        localStorage.setItem("currentFollowing",JSON.stringify(result.currentFollowing))
+        // localStorage.setItem("currentPostPic",JSON.stringify(result.currentPostPic))
+        // localStorage.setItem("currrentUserLike",JSON.stringify(result.currentUserLike))
+        // localStorage.setItem("currentFollower",JSON.stringify(result.currentFollower))
+        // localStorage.setItem("currentFollowing",JSON.stringify(result.currentFollowing))
 
         alert(result.message)
         this.route.navigateByUrl("home")

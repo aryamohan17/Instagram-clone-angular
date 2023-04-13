@@ -1,12 +1,24 @@
 <div class="w-100 ">
+  <!-- <form class="d-flex">
+    <input class="form-control me-2" [(ngModel)]="searchTerm" name="search"  type="search" placeholder="Search" aria-label="Search">
+    <button class="btn btn-primary" (click)="search(searchTerm)" type="submit">Search</button>
+  </form> 
+  <div *ngFor="let i of user">
+    <a style="text-decoration: none;" >
+      <img class="rounded-circle border border-3 border-danger" alt="avatar1" [src]="i.profile_photo" width="64" height="66" />&nbsp;&nbsp;
+       <span class="text-dark">{{i.fullName}}</span>&nbsp;&nbsp;
+   </a>
+  </div> -->
 <div class="row">
-  <div class="col-4">
+  <div class="col-lg-4">
+   
     <div class="d-flex flex-column flex-shrink-0 p-3 bg-white" style="width: 280px;">
       <a href="/" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto link-dark text-decoration-none">
         <svg class="bi me-2" width="40" height="32"><use xlink:href="#bootstrap"></use></svg>
         <span class="fs-4"><img src="assets/instagram-word-login.jpg" class="w-50 h-50" alt="" srcset=""></span>
       </a>
       <hr>
+     
       <ul class="nav nav-pills flex-column mb-auto">
         <!-- <li class="nav-item">
           <a href="#" class="nav-link-dark" aria-current="page">
@@ -21,10 +33,11 @@
         </li>
 
         <li>
-          <a href="#" class="nav-link link-dark">
+          <!-- <a href="#" class="nav-link link-dark">
             <i class="fa-solid fa-magnifying-glass"></i>&nbsp;&nbsp;
             Search
-          </a>
+          </a> -->
+          
         </li>
         <li>
           <a href="#" class="nav-link link-dark">
@@ -71,10 +84,18 @@
         </li>
         <li>
           <a href="#" class="nav-link link-dark">
-            <i class="fa-solid fa-bars"></i>&nbsp;&nbsp;
-            <button class="bg-danger text-white border-danger ms-3 " (click)="logout()">Logout</button>
+            <button class="bg-secondary text-white border-secondary ms-3 " (click)="logout()">Logout</button>
 
           </a>
+        </li>
+        <li>
+          <div >
+
+          <a href="#" class="nav-link link-dark">
+            <!-- <button class="bg-danger text-white border-danger ms-3 " (click)="delete()">Delete</button> -->
+
+          </a>
+        </div>
         </li>
       </ul>
       <!-- <div class="dropdown">
@@ -91,7 +112,7 @@
    
   </div>
  
-  <div class="col-4 mt-3">
+  <div class="col-lg-4 mt-3">
 <div class="story_img">
   <img class="rounded-circle border border-3 border-danger" alt="avatar1" src="assets/Aishwarya-Rai.jpg" width="64" height="66" />
   <!-- <p class="me-1">aiswarya_rai</p> -->
@@ -128,17 +149,17 @@
     <mat-icon>favorite</mat-icon>
   </button> -->
 
-  <h6>aiwarya_rai</h6>
+  <!-- <h6>aiwarya_rai</h6>
   <img src="assets/Aishwarya-Rai.jpg" width="340"height="300" alt=""><br>
-  <i class="fa-regular fa-2x fa-heart">&nbsp;&nbsp;<i class="fa-regular fa-comment"></i></i>&nbsp;&nbsp;<i class="fa-solid fa-2x fa-square-arrow-up-right"></i>
+  <i class="fa-regular fa-2x fa-heart">&nbsp;&nbsp;<i class="fa-regular fa-comment"></i></i>&nbsp;&nbsp;<i class="fa-solid fa-2x fa-square-arrow-up-right"></i> -->
 </div>
   </div>
-  <div class="col-4 mt-3">
+  <div class="col-lg-4 mt-3">
     <div class="profiles">
             <img class="rounded-circle border border-3 border-danger" alt="avatar1" [src]="profile_pics" width="64" height="66" />&nbsp;&nbsp;
-            <span><a routerLink="/viewUser" style="text-decoration: none;">{{userName}}</a></span>&nbsp;&nbsp;
+            <span><a routerLink="" style="text-decoration: none;">{{userName}}</a></span>&nbsp;&nbsp;
             <span>{{fname}}</span>&nbsp;&nbsp;
-            <a  style="text-decoration: none;">Switch</a>
+            <!-- <button class="btn btn-outline-primary" href="/viewCurrentUserData" >View profile</button> -->
 
     </div><br>
     <div class="suggest_people">
@@ -148,7 +169,7 @@
           <a style="text-decoration: none;" >
             <img class="rounded-circle border border-3 border-danger" alt="avatar1" [src]="i.profile_photo" width="64" height="66" />&nbsp;&nbsp;
              <span class="text-dark">{{i.fullName}}</span>&nbsp;&nbsp;
-             <button class="btn btn-outline-primary" (click)="followUser(i.username)">Follow</button>
+             <button class="btn btn-outline-primary"(click)="followUser(i.username)" >View profile</button>
          </a><br>
         </div>
       

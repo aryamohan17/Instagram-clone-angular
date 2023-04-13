@@ -1,0 +1,20 @@
+<div class="row mt-5">
+    <div class="col-4"></div>
+    <div class="col-4">
+      <span class="text-dark mt-5" ><h4>{{userData.username}}</h4></span>&nbsp;&nbsp;<br>
+
+        <img class="rounded-circle border border-3 border-danger" alt="avatar1" [src]="userData.profile_photo" width="64" height="66" />&nbsp;&nbsp;&nbsp;&nbsp;
+        <span class="ms-5">
+            <span class="">55 post</span>&nbsp;&nbsp;&nbsp;&nbsp;
+            <span class="">43 follower</span>&nbsp;&nbsp;
+            <span class="">1 following</span>&nbsp;&nbsp;
+
+        </span>
+        <span class="text-dark mt-5" ><h4>{{userData.fullName}}</h4></span>&nbsp;&nbsp;<br>
+        <button type="button" class="btn btn-outline-primary">Edit profile</button>
+        <div class>
+          <img  [src]="userData.profile_photo" width="320" height="366" />
+        </div>      
+    </div>
+    <div class="col-4"></div>
+</div>

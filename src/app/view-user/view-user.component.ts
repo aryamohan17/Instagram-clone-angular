@@ -8,7 +8,13 @@ import { ActivatedRoute } from '@angular/router';
   styleUrls: ['./view-user.component.css']
 })
 export class ViewUserComponent {
-  viewUser:any
+  
+  userId:any
+  userData={
+    username:'',
+    profile_photo:'',
+    fullName:''
+  }
   constructor(private ds:DataService,private ar:ActivatedRoute){
  
 
@@ -16,19 +22,14 @@ export class ViewUserComponent {
 
 
   ngOnInit(){
-    // this.ds.viewUser(JSON.parse(localStorage.getItem("currentUserName")||"")).subscribe((result:any)=>{
-    //   this.viewUser=result.userData
-    // })
-    // console.log(
-    //   this.viewUser
-    // );
     
-    // this.username=this.ar.snapshot.paramMap.get('username')
-    // console.log("id is",this.username);
-    // this.ds.getUserByUsername(this.username).subscribe((result:any)=>{
-    //   console.log({result})
-    //   this.data=result.userData
-    // })
+      this.userId=this.ar.snapshot.paramMap.get('_id')
+      console.log("id is",this.userId);
+      this.ds.getCurrentUserData(this.userId).subscribe((result:any)=>{
+        console.log({result})
+        this.userData=result.currentUserData
+      })
     
-  }
+  
+}
 }

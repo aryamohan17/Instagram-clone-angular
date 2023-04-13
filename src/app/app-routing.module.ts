@@ -11,11 +11,8 @@ const routes: Routes = [
   {path:'',component:LoginComponent},
   {path:'signup',component:SignupComponent},
   {path:'home',component:HomePageComponent},
-  {path:'viewUser',component:ViewUserComponent},
-  {path:'suggestUser/:username',component:SuggestUserComponent},
-  {path:'loginUser/:username',component:SuggestUserComponent},
-  
-
+  {path:'viewCurrentUserData/:_id',component:ViewUserComponent},
+  {path:'suggestUser/:username',component:SuggestUserComponent}
 ];
 
 @NgModule({
