@@ -30,7 +30,7 @@ export class DataService {
   //   return this.http.post("http://localhost:3010/viewUser",data)
 
   // }
-  getUserByUsername(username:any){
+  viewUser(username:any){
     const data = {username}
     return this.http.post("http://localhost:5050/viewUser",data)
 

@@ -18,7 +18,10 @@
         <span class="fs-4"><img src="assets/instagram-word-login.jpg" class="w-50 h-50" alt="" srcset=""></span>
       </a>
       <hr>
-     
+      <form class="d-flex">
+        <input class="form-control me-2" [(ngModel)]="searchTerm" (keyup)="search($event)" type="search" placeholder="Search" aria-label="Search">
+        <button class="btn btn-outline-primary" type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
+      </form>
       <ul class="nav nav-pills flex-column mb-auto">
         <!-- <li class="nav-item">
           <a href="#" class="nav-link-dark" aria-current="page">
@@ -30,6 +33,9 @@
           <a href="#" class="nav-link link-dark">
             <i class="fa-solid fa-house"></i>&nbsp;&nbsp;Home
           </a>
+        </li>
+        <li>
+         
         </li>
 
         <li>
@@ -159,9 +165,23 @@
             <img class="rounded-circle border border-3 border-danger" alt="avatar1" [src]="profile_pics" width="64" height="66" />&nbsp;&nbsp;
             <span><a routerLink="" style="text-decoration: none;">{{userName}}</a></span>&nbsp;&nbsp;
             <span>{{fname}}</span>&nbsp;&nbsp;
-            <!-- <button class="btn btn-outline-primary" href="/viewCurrentUserData" >View profile</button> -->
+            <a  href="/editUserData/{{userName}}" >Edit profile</a>
 
     </div><br>
+    <div class="suggest_people">
+      <div class="heading">
+        <p>Search result</p>
+        <div *ngFor="let i of allUserDatas | filter:searchKey:'username'">
+          <a style="text-decoration: none;" >
+            <img class="rounded-circle border border-3 border-danger" alt="avatar1" [src]="i.profile_photo" width="64" height="66" />&nbsp;&nbsp;
+             <span class="text-dark">{{i.fullName}}</span>&nbsp;&nbsp;
+             <button class="btn btn-outline-primary"(click)="followUser(i.username)" >View profile</button>
+         </a><br>
+        </div>
+      
+      
+      </div>
+    </div>
     <div class="suggest_people">
       <div class="heading">
         <p>Suggestions for you</p>

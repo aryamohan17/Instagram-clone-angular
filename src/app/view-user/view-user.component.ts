@@ -10,11 +10,12 @@ import { ActivatedRoute } from '@angular/router';
 export class ViewUserComponent {
   
   userId:any
-  userData={
-    username:'',
-    profile_photo:'',
-    fullName:''
-  }
+  userName:any
+  // userData={
+  //   username:'',
+  //   profile_photo:'',
+  //   fullName:''
+  // }
   constructor(private ds:DataService,private ar:ActivatedRoute){
  
 
@@ -22,13 +23,24 @@ export class ViewUserComponent {
 
 
   ngOnInit(){
-    
-      this.userId=this.ar.snapshot.paramMap.get('_id')
-      console.log("id is",this.userId);
-      this.ds.getCurrentUserData(this.userId).subscribe((result:any)=>{
-        console.log({result})
-        this.userData=result.currentUserData
+
+    this.ar.params.subscribe((data:any)=>{
+      this.userName=data["username"]
+      this.ds.viewUser(this.userName).subscribe((data:any)=>{
+        console.log(data);
+        
       })
+      // console.log(this.userName);
+      
+
+    })
+    
+      // this.userId=this.ar.snapshot.paramMap.get('_id')
+      // console.log("id is",this.userId);
+      // this.ds.getCurrentUserData(this.userId).subscribe((result:any)=>{
+      //   console.log({result})
+      //   this.userData=result.currentUserData
+      // })
     
   
 }

@@ -31,19 +31,23 @@ export class HomePageComponent {
     }
    
   }
-  search(username:any){
-    this.ds.search_user(username).subscribe((user)=>{
-      this.user=user
-    })
-  }
-  ngOnInit(){
+ searchKey:any=""
+ search(event:any){
+  this.searchTerm=event.target.value
+  this.ds.search.next(this.searchTerm)
+
+ }
+ 
+  ngOnInit(): void{
      
    
       this.ds.viewAll().subscribe((result:any)=>{
         this.allUserDatas=result.allPosts
       })
       console.log(this.allUserDatas);
-      
+      this.ds.search.subscribe((value:any)=>{
+        this.searchKey=value
+      })
    
     
   }

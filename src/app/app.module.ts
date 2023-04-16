@@ -11,6 +11,8 @@ import { SignupComponent } from './signup/signup.component';
 import { HomePageComponent } from './home-page/home-page.component';
 import { ViewUserComponent } from './view-user/view-user.component';
 import { SuggestUserComponent } from './suggest-user/suggest-user.component';
+import { FilterPipe } from './pipes/filter.pipe';
+import { EditProfileComponent } from './edit-profile/edit-profile.component';
 
 @NgModule({
   declarations: [
@@ -20,6 +22,8 @@ import { SuggestUserComponent } from './suggest-user/suggest-user.component';
     HomePageComponent,
     ViewUserComponent,
     SuggestUserComponent,
+    FilterPipe,
+    EditProfileComponent,
   ],
   imports: [
     BrowserModule,
